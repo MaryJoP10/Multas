@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bibl_Multas.Interfaces;
 
 namespace Bibl_Multas.Clases
 {
-    public abstract class Multa
+    public abstract class Multa : ISancionEconomica
     {
         protected Conductor sancionado;
         protected Vehiculo vehiculo;
@@ -35,5 +36,7 @@ namespace Bibl_Multas.Clases
                     valor = value;
             }    
         }
+
+        public abstract ulong Calcular_sancion(ulong val_sal_min);
     }
 }

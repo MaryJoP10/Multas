@@ -42,13 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conductor.cs" />
+    <Compile Include="Clases\Mayor.cs" />
     <Compile Include="Clases\Multa.cs" />
     <Compile Include="Clases\Transito.cs" />
     <Compile Include="Clases\Vehiculo.cs" />
+    <Compile Include="Interfaces\IAnularLicencia.cs" />
+    <Compile Include="Interfaces\IRestarPuntos.cs" />
+    <Compile Include="Interfaces\ISancionEconomica.cs" />
+    <Compile Include="Interfaces\ITrabajoSocial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
