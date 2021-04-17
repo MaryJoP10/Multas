@@ -21,13 +21,13 @@ namespace Bibl_Multas.Clases
 
         public Conductor(l_tipo_id tipo_id,  string id, string nombre, byte edad)
         {
-            Random nro = new Random();
+            Random alea = new Random();
 
             this.tipo_id = tipo_id;
             Id = id;
             Nombre = nombre;
             Edad = edad;
-            nro_licencia = (ulong)nro.Next(100000, 999999);
+            nro_licencia = (ulong)alea.Next(100000, 999999);
             estado_licencia = l_estado_licencia.Activa;
         }
 
