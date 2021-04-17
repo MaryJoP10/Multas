@@ -17,7 +17,7 @@ namespace Bibl_Multas.Clases
         private string id;
         private byte edad;
         private ulong nro_licencia;
-        private ulong total_puntos = 50000;
+        private uint total_puntos = 50000;
 
         public Conductor(l_tipo_id tipo_id,  string id, string nombre, byte edad)
         {
@@ -64,7 +64,7 @@ namespace Bibl_Multas.Clases
                     edad = value;
             }
         }
-        public ulong Total_puntos { get => total_puntos; set => total_puntos = value; }
+        public uint Total_puntos { get => total_puntos; set => total_puntos = value; }
         internal l_estado_licencia Estado_licencia { get => estado_licencia; set => estado_licencia = value; }
     }
 }
