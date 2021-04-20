@@ -69,6 +69,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Conductor+l_estado_licencia.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Conductor+l_tipo_id.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Conductor.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Mayor+lista_mayores.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Mayor.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Menor+lista_menores.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Menor.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Multa.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Transito.datasource" />
+    <None Include="Properties\DataSources\Bibl_Multas.Clases.Vehiculo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

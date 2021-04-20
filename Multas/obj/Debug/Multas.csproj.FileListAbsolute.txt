@@ -1,0 +1,13 @@
+C:\Users\maria\Documents\Repositorio\Multas\Multas\bin\Debug\Multas.exe.config
+C:\Users\maria\Documents\Repositorio\Multas\Multas\bin\Debug\Multas.exe
+C:\Users\maria\Documents\Repositorio\Multas\Multas\bin\Debug\Multas.pdb
+C:\Users\maria\Documents\Repositorio\Multas\Multas\bin\Debug\Bibl_Multas.dll
+C:\Users\maria\Documents\Repositorio\Multas\Multas\bin\Debug\Bibl_Multas.pdb
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.csprojAssemblyReference.cache
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.F_ppal.resources
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.Properties.Resources.resources
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.csproj.GenerateResource.cache
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.csproj.CoreCompileInputs.cache
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.csproj.CopyComplete
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.exe
+C:\Users\maria\Documents\Repositorio\Multas\Multas\obj\Debug\Multas.pdb
