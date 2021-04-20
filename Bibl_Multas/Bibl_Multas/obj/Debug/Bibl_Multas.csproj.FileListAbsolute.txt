@@ -4,3 +4,9 @@ C:\Users\Personal\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug
 C:\Users\Personal\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.csproj.CoreCompileInputs.cache
 C:\Users\Personal\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.dll
 C:\Users\Personal\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.pdb
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\bin\Debug\Bibl_Multas.dll
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\bin\Debug\Bibl_Multas.pdb
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.csprojAssemblyReference.cache
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.csproj.CoreCompileInputs.cache
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.dll
+C:\Users\maria\Documents\Repositorio\Multas\Bibl_Multas\Bibl_Multas\obj\Debug\Bibl_Multas.pdb

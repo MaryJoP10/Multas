@@ -57,5 +57,10 @@ namespace Multas
                 MessageBox.Show("Error creando el conductor " + error);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

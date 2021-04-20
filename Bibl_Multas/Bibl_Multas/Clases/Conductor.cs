@@ -66,5 +66,10 @@ namespace Bibl_Multas.Clases
         }
         public uint Total_puntos { get => total_puntos; set => total_puntos = value; }
         internal l_estado_licencia Estado_licencia { get => estado_licencia; set => estado_licencia = value; }
+
+        public override string ToString()
+        {
+            return tipo_id + " " +nro_licencia+ " " +nombre+ " "+edad;
+        }
     }
 }
