@@ -59,16 +59,18 @@ namespace Multas
             this.cb_ano = new System.Windows.Forms.ComboBox();
             this.cb_modelo = new System.Windows.Forms.ComboBox();
             this.cb_marca = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_acom_menores = new System.Windows.Forms.TextBox();
+            this.tb_acomu_mayores = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -342,19 +344,19 @@ namespace Multas
             this.cb_marca.TabIndex = 0;
             this.cb_marca.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // tb_acom_menores
             // 
-            this.textBox1.Location = new System.Drawing.Point(587, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
-            this.textBox1.TabIndex = 3;
+            this.tb_acom_menores.Location = new System.Drawing.Point(587, 299);
+            this.tb_acom_menores.Name = "tb_acom_menores";
+            this.tb_acom_menores.Size = new System.Drawing.Size(217, 20);
+            this.tb_acom_menores.TabIndex = 3;
             // 
-            // textBox2
+            // tb_acomu_mayores
             // 
-            this.textBox2.Location = new System.Drawing.Point(587, 376);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 20);
-            this.textBox2.TabIndex = 4;
+            this.tb_acomu_mayores.Location = new System.Drawing.Point(587, 376);
+            this.tb_acomu_mayores.Name = "tb_acomu_mayores";
+            this.tb_acomu_mayores.Size = new System.Drawing.Size(217, 20);
+            this.tb_acomu_mayores.TabIndex = 4;
             // 
             // label10
             // 
@@ -391,6 +393,10 @@ namespace Multas
             this.label12.TabIndex = 8;
             this.label12.Text = "Lista Multas";
             // 
+            // vehiculoBindingSource
+            // 
+            this.vehiculoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Vehiculo);
+            // 
             // F_ppal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,8 +406,8 @@ namespace Multas
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_acomu_mayores);
+            this.Controls.Add(this.tb_acom_menores);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -416,6 +422,7 @@ namespace Multas
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -452,12 +459,13 @@ namespace Multas
         private System.Windows.Forms.Label marca;
         private System.Windows.Forms.ComboBox cb_ano;
         private System.Windows.Forms.ComboBox cb_modelo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_acom_menores;
+        private System.Windows.Forms.TextBox tb_acomu_mayores;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.BindingSource vehiculoBindingSource;
     }
 }
 
