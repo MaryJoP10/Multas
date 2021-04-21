@@ -19,7 +19,7 @@ namespace Bibl_Multas.Clases
         private ulong nro_licencia;
         private uint total_puntos = 50000;
 
-        public Conductor(l_tipo_id tipo_id,  string id, string nombre, byte edad)
+        public Conductor(l_tipo_id tipo_id, string id, string nombre, byte edad)
         {
             Random alea = new Random();
 
@@ -27,10 +27,21 @@ namespace Bibl_Multas.Clases
             Id = id;
             Nombre = nombre;
             Edad = edad;
-            nro_licencia = (ulong)alea.Next(100000, 999999);
+            Nro_licencia = nro_licencia;
             estado_licencia = l_estado_licencia.Activa;
         }
 
+        public ulong Nro_licencia
+        {
+            get => nro_licencia;
+            set
+            {
+                if (value < 100000 || value > 999999)
+                    throw new Exception("El número de licencia no es valido");
+                else
+                    nro_licencia = value;
+            }
+        }
         public string Nombre
         {
             get => nombre;

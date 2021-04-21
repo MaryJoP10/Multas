@@ -44,21 +44,27 @@ namespace Multas
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cb_menor = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cb_mayor = new System.Windows.Forms.ComboBox();
-            this.b_mayor = new System.Windows.Forms.Button();
             this.b_menor = new System.Windows.Forms.Button();
-            this.cb_marca = new System.Windows.Forms.ComboBox();
-            this.cb_modelo = new System.Windows.Forms.ComboBox();
-            this.cb_ano = new System.Windows.Forms.ComboBox();
-            this.marca = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.b_mayor = new System.Windows.Forms.Button();
+            this.cb_mayor = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_menor = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tb_placa = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.marca = new System.Windows.Forms.Label();
+            this.cb_ano = new System.Windows.Forms.ComboBox();
+            this.cb_modelo = new System.Windows.Forms.ComboBox();
+            this.cb_marca = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -199,6 +205,58 @@ namespace Multas
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Infracciones";
             // 
+            // b_menor
+            // 
+            this.b_menor.Location = new System.Drawing.Point(57, 68);
+            this.b_menor.Name = "b_menor";
+            this.b_menor.Size = new System.Drawing.Size(153, 23);
+            this.b_menor.TabIndex = 5;
+            this.b_menor.Text = "Imponer Infraccón Menor";
+            this.b_menor.UseVisualStyleBackColor = true;
+            // 
+            // b_mayor
+            // 
+            this.b_mayor.Location = new System.Drawing.Point(57, 145);
+            this.b_mayor.Name = "b_mayor";
+            this.b_mayor.Size = new System.Drawing.Size(153, 23);
+            this.b_mayor.TabIndex = 4;
+            this.b_mayor.Text = "Imponer Infracción Mayor";
+            this.b_mayor.UseVisualStyleBackColor = true;
+            // 
+            // cb_mayor
+            // 
+            this.cb_mayor.FormattingEnabled = true;
+            this.cb_mayor.Location = new System.Drawing.Point(6, 118);
+            this.cb_mayor.Name = "cb_mayor";
+            this.cb_mayor.Size = new System.Drawing.Size(244, 21);
+            this.cb_mayor.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Lista de infracciones mayores";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Lista de infracciones menores";
+            // 
+            // cb_menor
+            // 
+            this.cb_menor.FormattingEnabled = true;
+            this.cb_menor.Location = new System.Drawing.Point(6, 41);
+            this.cb_menor.Name = "cb_menor";
+            this.cb_menor.Size = new System.Drawing.Size(244, 21);
+            this.cb_menor.TabIndex = 0;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tb_placa);
@@ -216,109 +274,12 @@ namespace Multas
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Vehículo";
             // 
-            // cb_menor
+            // tb_placa
             // 
-            this.cb_menor.FormattingEnabled = true;
-            this.cb_menor.Location = new System.Drawing.Point(6, 41);
-            this.cb_menor.Name = "cb_menor";
-            this.cb_menor.Size = new System.Drawing.Size(244, 21);
-            this.cb_menor.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Lista de infracciones menores";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Lista de infracciones mayores";
-            // 
-            // cb_mayor
-            // 
-            this.cb_mayor.FormattingEnabled = true;
-            this.cb_mayor.Location = new System.Drawing.Point(6, 118);
-            this.cb_mayor.Name = "cb_mayor";
-            this.cb_mayor.Size = new System.Drawing.Size(244, 21);
-            this.cb_mayor.TabIndex = 3;
-            // 
-            // b_mayor
-            // 
-            this.b_mayor.Location = new System.Drawing.Point(57, 145);
-            this.b_mayor.Name = "b_mayor";
-            this.b_mayor.Size = new System.Drawing.Size(153, 23);
-            this.b_mayor.TabIndex = 4;
-            this.b_mayor.Text = "Imponer Infracción Mayor";
-            this.b_mayor.UseVisualStyleBackColor = true;
-            // 
-            // b_menor
-            // 
-            this.b_menor.Location = new System.Drawing.Point(57, 68);
-            this.b_menor.Name = "b_menor";
-            this.b_menor.Size = new System.Drawing.Size(153, 23);
-            this.b_menor.TabIndex = 5;
-            this.b_menor.Text = "Imponer Infraccón Menor";
-            this.b_menor.UseVisualStyleBackColor = true;
-            // 
-            // cb_marca
-            // 
-            this.cb_marca.FormattingEnabled = true;
-            this.cb_marca.Location = new System.Drawing.Point(6, 32);
-            this.cb_marca.Name = "cb_marca";
-            this.cb_marca.Size = new System.Drawing.Size(210, 21);
-            this.cb_marca.TabIndex = 0;
-            this.cb_marca.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // cb_modelo
-            // 
-            this.cb_modelo.FormattingEnabled = true;
-            this.cb_modelo.Location = new System.Drawing.Point(6, 79);
-            this.cb_modelo.Name = "cb_modelo";
-            this.cb_modelo.Size = new System.Drawing.Size(184, 21);
-            this.cb_modelo.TabIndex = 1;
-            // 
-            // cb_ano
-            // 
-            this.cb_ano.FormattingEnabled = true;
-            this.cb_ano.Location = new System.Drawing.Point(6, 124);
-            this.cb_ano.Name = "cb_ano";
-            this.cb_ano.Size = new System.Drawing.Size(68, 21);
-            this.cb_ano.TabIndex = 2;
-            // 
-            // marca
-            // 
-            this.marca.AutoSize = true;
-            this.marca.Location = new System.Drawing.Point(6, 16);
-            this.marca.Name = "marca";
-            this.marca.Size = new System.Drawing.Size(37, 13);
-            this.marca.TabIndex = 4;
-            this.marca.Text = "Marca";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Modelo";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 109);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Año";
+            this.tb_placa.Location = new System.Drawing.Point(6, 176);
+            this.tb_placa.Name = "tb_placa";
+            this.tb_placa.Size = new System.Drawing.Size(100, 20);
+            this.tb_placa.TabIndex = 3;
             // 
             // label9
             // 
@@ -329,18 +290,118 @@ namespace Multas
             this.label9.TabIndex = 7;
             this.label9.Text = "Placa";
             // 
-            // tb_placa
+            // label8
             // 
-            this.tb_placa.Location = new System.Drawing.Point(6, 176);
-            this.tb_placa.Name = "tb_placa";
-            this.tb_placa.Size = new System.Drawing.Size(100, 20);
-            this.tb_placa.TabIndex = 3;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 109);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(26, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Año";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Modelo";
+            // 
+            // marca
+            // 
+            this.marca.AutoSize = true;
+            this.marca.Location = new System.Drawing.Point(6, 16);
+            this.marca.Name = "marca";
+            this.marca.Size = new System.Drawing.Size(37, 13);
+            this.marca.TabIndex = 4;
+            this.marca.Text = "Marca";
+            // 
+            // cb_ano
+            // 
+            this.cb_ano.FormattingEnabled = true;
+            this.cb_ano.Location = new System.Drawing.Point(6, 124);
+            this.cb_ano.Name = "cb_ano";
+            this.cb_ano.Size = new System.Drawing.Size(68, 21);
+            this.cb_ano.TabIndex = 2;
+            // 
+            // cb_modelo
+            // 
+            this.cb_modelo.FormattingEnabled = true;
+            this.cb_modelo.Location = new System.Drawing.Point(6, 79);
+            this.cb_modelo.Name = "cb_modelo";
+            this.cb_modelo.Size = new System.Drawing.Size(184, 21);
+            this.cb_modelo.TabIndex = 1;
+            // 
+            // cb_marca
+            // 
+            this.cb_marca.FormattingEnabled = true;
+            this.cb_marca.Location = new System.Drawing.Point(6, 32);
+            this.cb_marca.Name = "cb_marca";
+            this.cb_marca.Size = new System.Drawing.Size(210, 21);
+            this.cb_marca.TabIndex = 0;
+            this.cb_marca.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(587, 299);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(217, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(587, 376);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(217, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(584, 359);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Acomulado Multas Mayores";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(584, 282);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(138, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Acomulado Multas Menores";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(587, 44);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(217, 212);
+            this.listBox1.TabIndex = 7;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(584, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Lista Multas";
             // 
             // F_ppal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(843, 448);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -356,6 +417,7 @@ namespace Multas
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -390,6 +452,12 @@ namespace Multas
         private System.Windows.Forms.Label marca;
         private System.Windows.Forms.ComboBox cb_ano;
         private System.Windows.Forms.ComboBox cb_modelo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label12;
     }
 }
 
