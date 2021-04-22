@@ -116,5 +116,22 @@ namespace Multas
                 MessageBox.Show("Error al imponer multa menor  " + error);
             }
         }
+
+        private void b_mayor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                veh_ppal = new Vehiculo(tb_placa.Text, cb_marca.Text, cb_modelo.Text, new DateTime(int.Parse(cb_ano.Text), 1, 1));
+                Mayor nueva_multa = new Mayor((Conductor)lb_conductores.SelectedItem, veh_ppal, (Mayor.lista_mayores)Enum.Parse(typeof(Mayor.lista_mayores), cb_mayor.Text), Springfield.Val_sal_min);
+                Springfield.L_multas.Add(nueva_multa);
+
+                lb_multas.DataSource = null;
+                lb_multas.DataSource = Springfield.L_multas;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al imponer multa menor  " + error);
+            }
+        }
     }
 }

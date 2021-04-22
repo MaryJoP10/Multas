@@ -66,11 +66,13 @@ namespace Multas
             this.lb_multas = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transitoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -225,6 +227,7 @@ namespace Multas
             this.b_mayor.TabIndex = 4;
             this.b_mayor.Text = "Imponer Infracción Mayor";
             this.b_mayor.UseVisualStyleBackColor = true;
+            this.b_mayor.Click += new System.EventHandler(this.b_mayor_Click);
             // 
             // cb_mayor
             // 
@@ -381,6 +384,7 @@ namespace Multas
             // 
             // lb_multas
             // 
+            this.lb_multas.DataSource = this.transitoBindingSource;
             this.lb_multas.FormattingEnabled = true;
             this.lb_multas.Location = new System.Drawing.Point(587, 44);
             this.lb_multas.Name = "lb_multas";
@@ -399,6 +403,10 @@ namespace Multas
             // vehiculoBindingSource
             // 
             this.vehiculoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Vehiculo);
+            // 
+            // transitoBindingSource
+            // 
+            this.transitoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Transito);
             // 
             // F_ppal
             // 
@@ -426,6 +434,7 @@ namespace Multas
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transitoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,6 +478,7 @@ namespace Multas
         private System.Windows.Forms.ListBox lb_multas;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.BindingSource vehiculoBindingSource;
+        private System.Windows.Forms.BindingSource transitoBindingSource;
     }
 }
 

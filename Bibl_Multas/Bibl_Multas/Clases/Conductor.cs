@@ -27,7 +27,7 @@ namespace Bibl_Multas.Clases
             Id = id;
             Nombre = nombre;
             Edad = edad;
-            Nro_licencia = nro_licencia;
+            nro_licencia = (ulong)alea.Next(100000, 999999);
             estado_licencia = l_estado_licencia.Activa;
         }
 
@@ -80,7 +80,7 @@ namespace Bibl_Multas.Clases
 
         public override string ToString()
         {
-            return tipo_id + " " +nro_licencia+ " " +nombre+ " "+edad;
+            return tipo_id + " " +id+ " " +nombre+ " "+edad;
         }
     }
 }
