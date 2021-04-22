@@ -60,19 +60,19 @@ namespace Multas
             this.cb_modelo = new System.Windows.Forms.ComboBox();
             this.cb_marca = new System.Windows.Forms.ComboBox();
             this.tb_acom_menores = new System.Windows.Forms.TextBox();
-            this.tb_acomu_mayores = new System.Windows.Forms.TextBox();
+            this.tb_acom_mayores = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lb_multas = new System.Windows.Forms.ListBox();
+            this.transitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.transitoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductorBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transitoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -356,13 +356,13 @@ namespace Multas
             this.tb_acom_menores.Size = new System.Drawing.Size(217, 20);
             this.tb_acom_menores.TabIndex = 3;
             // 
-            // tb_acomu_mayores
+            // tb_acom_mayores
             // 
-            this.tb_acomu_mayores.Location = new System.Drawing.Point(587, 376);
-            this.tb_acomu_mayores.Name = "tb_acomu_mayores";
-            this.tb_acomu_mayores.ReadOnly = true;
-            this.tb_acomu_mayores.Size = new System.Drawing.Size(217, 20);
-            this.tb_acomu_mayores.TabIndex = 4;
+            this.tb_acom_mayores.Location = new System.Drawing.Point(587, 376);
+            this.tb_acom_mayores.Name = "tb_acom_mayores";
+            this.tb_acom_mayores.ReadOnly = true;
+            this.tb_acom_mayores.Size = new System.Drawing.Size(217, 20);
+            this.tb_acom_mayores.TabIndex = 4;
             // 
             // label10
             // 
@@ -391,6 +391,10 @@ namespace Multas
             this.lb_multas.Size = new System.Drawing.Size(217, 212);
             this.lb_multas.TabIndex = 7;
             // 
+            // transitoBindingSource
+            // 
+            this.transitoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Transito);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -404,10 +408,6 @@ namespace Multas
             // 
             this.vehiculoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Vehiculo);
             // 
-            // transitoBindingSource
-            // 
-            this.transitoBindingSource.DataSource = typeof(Bibl_Multas.Clases.Transito);
-            // 
             // F_ppal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +417,7 @@ namespace Multas
             this.Controls.Add(this.lb_multas);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.tb_acomu_mayores);
+            this.Controls.Add(this.tb_acom_mayores);
             this.Controls.Add(this.tb_acom_menores);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -433,8 +433,8 @@ namespace Multas
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transitoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehiculoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,7 +472,7 @@ namespace Multas
         private System.Windows.Forms.ComboBox cb_ano;
         private System.Windows.Forms.ComboBox cb_modelo;
         private System.Windows.Forms.TextBox tb_acom_menores;
-        private System.Windows.Forms.TextBox tb_acomu_mayores;
+        private System.Windows.Forms.TextBox tb_acom_mayores;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox lb_multas;

@@ -27,7 +27,7 @@ namespace Multas
             cb_tipo_id.DataSource = Enum.GetValues(typeof(Conductor.l_tipo_id));
             cb_marca.DataSource = Enum.GetValues(typeof(l_marcas));
             List<short> l_anos = new List<short>();
-            for(short i =1930; i<= DateTime.Today.Year; i++)
+            for(short i =1930; i<= DateTime.Today.Year+1; i++)
             {
                 l_anos.Add(i);
             }

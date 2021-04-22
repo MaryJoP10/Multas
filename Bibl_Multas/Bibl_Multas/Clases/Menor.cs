@@ -16,6 +16,8 @@ namespace Bibl_Multas.Clases
         public Menor(Conductor sancionado, Vehiculo vehiculo, lista_menores infraccion_menor, ulong val_sal_min) : base(sancionado, vehiculo)
         {
             this.infraccion_menor = infraccion_menor;
+
+            Valor = Calcular_sancion(val_sal_min);
         }
 
         public override ulong Calcular_sancion(ulong val_sal_min)
