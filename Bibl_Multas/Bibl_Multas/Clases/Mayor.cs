@@ -9,10 +9,10 @@ namespace Bibl_Multas.Clases
 {
     public class Mayor:Multa, ITrabajoSocial, IAnularLicencia
     {
-        public enum lista_mayores { soat_vencido, tecnico_mecanica_vencido, manejar_embriagado };
+        public enum lista_mayores { Soat_Vencido, Tecnico_Mecanica_Vencida, Manejar_Embriagado };
 
         public lista_mayores infraccion_mayor;
-        public Mayor(Conductor sancionado, Vehiculo vehiculo, lista_mayores infraccion_mayor) : base(sancionado, vehiculo)
+        public Mayor(Conductor sancionado, Vehiculo vehiculo, lista_mayores infraccion_mayor, ulong val_sal_min) : base(sancionado, vehiculo)
         {
             this.infraccion_mayor = infraccion_mayor;
         }
@@ -67,6 +67,9 @@ namespace Bibl_Multas.Clases
                 throw new Exception("\nOcurrió un error en anular la licencia \n" + error);
             }
         }
-
+        public override string ToString()
+        {
+            return infraccion_mayor + " " + Valor; 
+        }
     }
 }

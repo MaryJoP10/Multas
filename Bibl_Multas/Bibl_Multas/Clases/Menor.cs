@@ -13,7 +13,7 @@ namespace Bibl_Multas.Clases
 
         public lista_menores infraccion_menor;
 
-        public Menor(Conductor sancionado, Vehiculo vehiculo, lista_menores infraccion_menor) : base(sancionado, vehiculo)
+        public Menor(Conductor sancionado, Vehiculo vehiculo, lista_menores infraccion_menor, ulong val_sal_min) : base(sancionado, vehiculo)
         {
             this.infraccion_menor = infraccion_menor;
         }
@@ -42,6 +42,10 @@ namespace Bibl_Multas.Clases
             {
                 throw new Exception("\nOcurrió un error en restar puntos de licencia \n" + error);
             }
+        }
+        public override string ToString()
+        {
+            return infraccion_menor + " " + Valor;
         }
     }
 }

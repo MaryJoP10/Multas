@@ -63,7 +63,7 @@ namespace Multas
             this.tb_acomu_mayores = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lb_multas = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.vehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
@@ -215,6 +215,7 @@ namespace Multas
             this.b_menor.TabIndex = 5;
             this.b_menor.Text = "Imponer Infraccón Menor";
             this.b_menor.UseVisualStyleBackColor = true;
+            this.b_menor.Click += new System.EventHandler(this.b_menor_Click);
             // 
             // b_mayor
             // 
@@ -348,6 +349,7 @@ namespace Multas
             // 
             this.tb_acom_menores.Location = new System.Drawing.Point(587, 299);
             this.tb_acom_menores.Name = "tb_acom_menores";
+            this.tb_acom_menores.ReadOnly = true;
             this.tb_acom_menores.Size = new System.Drawing.Size(217, 20);
             this.tb_acom_menores.TabIndex = 3;
             // 
@@ -355,6 +357,7 @@ namespace Multas
             // 
             this.tb_acomu_mayores.Location = new System.Drawing.Point(587, 376);
             this.tb_acomu_mayores.Name = "tb_acomu_mayores";
+            this.tb_acomu_mayores.ReadOnly = true;
             this.tb_acomu_mayores.Size = new System.Drawing.Size(217, 20);
             this.tb_acomu_mayores.TabIndex = 4;
             // 
@@ -376,13 +379,13 @@ namespace Multas
             this.label11.TabIndex = 6;
             this.label11.Text = "Acomulado Multas Menores";
             // 
-            // listBox1
+            // lb_multas
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(587, 44);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(217, 212);
-            this.listBox1.TabIndex = 7;
+            this.lb_multas.FormattingEnabled = true;
+            this.lb_multas.Location = new System.Drawing.Point(587, 44);
+            this.lb_multas.Name = "lb_multas";
+            this.lb_multas.Size = new System.Drawing.Size(217, 212);
+            this.lb_multas.TabIndex = 7;
             // 
             // label12
             // 
@@ -403,7 +406,7 @@ namespace Multas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 448);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lb_multas);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.tb_acomu_mayores);
@@ -463,7 +466,7 @@ namespace Multas
         private System.Windows.Forms.TextBox tb_acomu_mayores;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lb_multas;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.BindingSource vehiculoBindingSource;
     }

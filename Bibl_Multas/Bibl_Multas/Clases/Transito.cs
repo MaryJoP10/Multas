@@ -11,12 +11,13 @@ namespace Bibl_Multas.Clases
         private ulong val_sal_min = 920000;
         private string direccion;
         private ulong telefono;
-        private Multa l_multas;
+        private List<Multa> l_multas;
 
         public Transito(string direccion, ulong telefono)
         {
-            this.Direccion = direccion;
-            this.Telefono = telefono;
+            l_multas = new List<Multa>();
+            Direccion = direccion;
+            Telefono = telefono;
         }
 
         public string Direccion 
@@ -41,9 +42,17 @@ namespace Bibl_Multas.Clases
                     throw new Exception("El telefono no es valido, debe de tener más de 7 digitos.");
             } 
         }
-        public Multa L_multas 
+        public List<Multa> L_multas 
         { 
             get => l_multas;
+            set
+            {
+                l_multas = value;
+            }
+        }
+        public ulong Val_sal_min
+        {
+            get => val_sal_min;
         }
     }
 }

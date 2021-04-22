@@ -14,10 +14,27 @@ namespace Multas
     public partial class F_ppal : Form
     {
         List<Conductor> l_conductores = new List<Conductor>();
+        enum l_marcas { Renault, Chevrolet, Nissan}
+        enum l_mod_ren {  Duster, Sandero, Alaskan, Logan}
+        enum l_mod_che { Onix, Beat, Aveo, Captiva }
+        enum l_mod_nis { March, Xtrail, Pathfinder}
+        Transito Springfield = new Transito("Calle 25", 3183365574);
+        Vehiculo veh_ppal;
+
         public F_ppal()
         {
             InitializeComponent();
             cb_tipo_id.DataSource = Enum.GetValues(typeof(Conductor.l_tipo_id));
+            cb_marca.DataSource = Enum.GetValues(typeof(l_marcas));
+            List<short> l_anos = new List<short>();
+            for(short i =1930; i<= DateTime.Today.Year; i++)
+            {
+                l_anos.Add(i);
+            }
+            cb_ano.DataSource = l_anos;
+            cb_ano.Text = DateTime.Today.Year.ToString();
+            cb_mayor.DataSource = Enum.GetValues(typeof(Mayor.lista_mayores));
+            cb_menor.DataSource = Enum.GetValues(typeof(Menor.lista_menores));
         }
 
         private void F_ppal_Load(object sender, EventArgs e)
@@ -60,7 +77,44 @@ namespace Multas
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                switch((l_marcas)Enum.Parse(typeof(l_marcas), cb_marca.SelectedItem.ToString()))
+                {
+                    case l_marcas.Renault:
+                        cb_modelo.DataSource = Enum.GetValues(typeof(l_mod_ren));
+                        break;
+                    case l_marcas.Chevrolet:
+                        cb_modelo.DataSource = Enum.GetValues(typeof(l_mod_che));
+                        break;
+                    case l_marcas.Nissan:
+                        cb_modelo.DataSource = Enum.GetValues(typeof(l_mod_nis));
+                        break;
+                    default:
+                        break;
+                }
+            }
+             catch (Exception error)
+            {
+                MessageBox.Show("Error al cambiar el dato de marca  " + error);
+            }
+        }
 
+        private void b_menor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                veh_ppal = new Vehiculo(tb_placa.Text, cb_marca.Text, cb_modelo.Text, new DateTime(int.Parse(cb_ano.Text), 1, 1));
+                Menor nueva_multa = new Menor((Conductor)lb_conductores.SelectedItem, veh_ppal, (Menor.lista_menores)Enum.Parse(typeof(Menor.lista_menores), cb_menor.Text), Springfield.Val_sal_min);
+                Springfield.L_multas.Add(nueva_multa);
+
+                lb_multas.DataSource = null;
+                lb_multas.DataSource = Springfield.L_multas;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al imponer multa menor  " + error);
+            }
         }
     }
 }
