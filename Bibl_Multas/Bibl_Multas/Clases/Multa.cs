@@ -25,7 +25,7 @@ namespace Bibl_Multas.Clases
             consecutivo = (ulong)nro.Next(100000, 1000000);
         }
 
-        protected ulong Valor 
+        public ulong Valor 
         { 
             get => valor;
             set

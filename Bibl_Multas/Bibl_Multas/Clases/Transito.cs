@@ -54,5 +54,24 @@ namespace Bibl_Multas.Clases
         {
             get => val_sal_min;
         }
+        public ulong[] Totalizar_multas()
+        {
+            try
+            {
+                ulong[] total_multas = new ulong[2] {0, 0};
+                foreach (Multa elemento in l_multas)
+                {
+                    if (elemento is Mayor)
+                        total_multas[0] += elemento.Valor;
+                    else
+                        total_multas[1] += elemento.Valor;
+                }
+                return total_multas;
+            }
+            catch(Exception error)
+            {
+                throw new Exception("Se presentó un error totalizando multas "+error);
+            }
+        }
     }
 }

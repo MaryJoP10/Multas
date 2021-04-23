@@ -104,33 +104,50 @@ namespace Multas
         {
             try
             {
+                //crear vehiculo
                 veh_ppal = new Vehiculo(tb_placa.Text, cb_marca.Text, cb_modelo.Text, new DateTime(int.Parse(cb_ano.Text), 1, 1));
                 Menor nueva_multa = new Menor((Conductor)lb_conductores.SelectedItem, veh_ppal, (Menor.lista_menores)Enum.Parse(typeof(Menor.lista_menores), cb_menor.Text), Springfield.Val_sal_min);
                 Springfield.L_multas.Add(nueva_multa);
-
+                //Llevar lista de multas a control
                 lb_multas.DataSource = null;
                 lb_multas.DataSource = Springfield.L_multas;
+                //modificar tb de los totales de las multas
+                Presentar_Acomulados();
             }
             catch (Exception error)
             {
                 MessageBox.Show("Error al imponer multa menor  " + error);
             }
         }
-
         private void b_mayor_Click(object sender, EventArgs e)
         {
             try
             {
+                //crear vehiculo
                 veh_ppal = new Vehiculo(tb_placa.Text, cb_marca.Text, cb_modelo.Text, new DateTime(int.Parse(cb_ano.Text), 1, 1));
                 Mayor nueva_multa = new Mayor((Conductor)lb_conductores.SelectedItem, veh_ppal, (Mayor.lista_mayores)Enum.Parse(typeof(Mayor.lista_mayores), cb_mayor.Text), Springfield.Val_sal_min);
                 Springfield.L_multas.Add(nueva_multa);
-
+                //Llevar lista de multas a control
                 lb_multas.DataSource = null;
                 lb_multas.DataSource = Springfield.L_multas;
+                //modificar tb de los totales de las multas
+                Presentar_Acomulados();
             }
             catch (Exception error)
             {
-                MessageBox.Show("Error al imponer multa menor  " + error);
+                MessageBox.Show("Error al imponer multa mayor  " + error);
+            }
+        }
+        internal void Presentar_Acomulados()
+        {
+            try
+            {
+                tb_acom_mayores.Text = Springfield.Totalizar_multas()[0].ToString();
+                tb_acom_menores.Text = Springfield.Totalizar_multas()[1].ToString();
+            }
+            catch(Exception error)
+            {
+                MessageBox.Show("\nError presentando acomulados \n" + error);
             }
         }
     }
