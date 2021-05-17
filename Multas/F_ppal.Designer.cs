@@ -117,6 +117,7 @@ namespace Multas
             this.b_cargar_archivo.TabIndex = 3;
             this.b_cargar_archivo.Text = "Cargar Archivo";
             this.b_cargar_archivo.UseVisualStyleBackColor = true;
+            this.b_cargar_archivo.Click += new System.EventHandler(this.b_cargar_archivo_Click);
             // 
             // b_crear
             // 

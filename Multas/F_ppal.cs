@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bibl_Multas.Clases;
+using Multas.Clases;
 
 namespace Multas
 {
@@ -66,6 +67,8 @@ namespace Multas
                     //cargar lista mostrar en List Box 
                     lb_conductores.DataSource = null;
                     lb_conductores.DataSource = l_conductores;
+
+                    Limpiar_Campos_Conductor();
                 }
                 else throw new Exception("Revisar el campo de Edad, hay un error.");
             }
@@ -149,6 +152,47 @@ namespace Multas
             {
                 MessageBox.Show("\nError presentando acomulados \n" + error);
             }
+        }
+
+        private void b_cargar_archivo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombre_archivo;
+                Archivo archivo_conductores = new Archivo();
+
+                //llamar control del explorador de archivo
+                OpenFileDialog explorador_arc = new OpenFileDialog();
+                explorador_arc.Filter = "TXT|txt";
+
+                //Se pregunta si se seleccionó un archivo
+                if (explorador_arc.ShowDialog() == DialogResult.OK)
+                {
+                    nombre_archivo = explorador_arc.FileName;
+                    foreach (Conductor elemento in archivo_conductores.Cargar_Archivo(nombre_archivo))
+                    {
+                        l_conductores.Add(elemento);
+                    }
+
+                    //refrescar listbox y mostrarlo
+                    lb_conductores.DataSource = null;
+                    lb_conductores.DataSource = l_conductores;
+                }
+                else throw new Exception("El usuario no seleccionó ningún archivo");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar el archivo.");
+                //return;
+            }
+        }
+
+        private void Limpiar_Campos_Conductor()
+        {
+            tb_edad.Clear();
+            tb_nombre.Clear();
+            tb_nro_id.Clear();
+            tb_nro_id.Focus();
         }
     }
 }
